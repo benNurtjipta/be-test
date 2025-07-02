@@ -42,7 +42,7 @@ const createUserCompany = async (req, res, next) => {
 
     const token = generateToken(role, newAccount._id);
 
-    res.cookie("token", token, {
+    res.cookie("jwt", token, {
       httpOnly: true,
       secure: true,
       sameSite: "lax",
