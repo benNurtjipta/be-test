@@ -4,6 +4,7 @@ import "dotenv/config";
 import cors from "cors";
 import userRouter from "./routes/userRouter.js";
 import companyRouter from "./routes/companyRouter.js";
+import errorHandler from "./middleware/errorhandler.js";
 
 const app = express();
 const PORT = process.env.PORT;
@@ -22,7 +23,7 @@ app.use(
 app.use("/user", userRouter);
 app.use("/company", companyRouter);
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server: http://localhost:${PORT}`);

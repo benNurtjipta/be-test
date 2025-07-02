@@ -3,10 +3,10 @@ POST http://localhost:3001/user/create HTTP/1.1
 Content-Type: application/json
 
 {
-   "email":"test12@test.com",
-   "password":"test" ,
-   "firstname":"test",
-   "lastname":"test",
+   "email":"tekjhkj@asf.com",
+   "password":"tesfA4tk3uthu4ht!iuhidgt" ,
+   "firstname":"asfasfsdgsdg",
+   "lastname":"tgsdgsdgsdgs",
    "role":"applicant"
 }
 
@@ -15,9 +15,9 @@ POST http://localhost:3001/company/create HTTP/1.1
 Content-Type: application/json
 
 {
-   "email":"test@test.com",
-   "password":"test" ,
-   "companyName":"test",
+   "email":"testsfsdfest.com",
+   "password":"tst" ,
+   "companyName":"st",
    "recruiter":"test",
    "role":"company"
 }
