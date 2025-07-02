@@ -5,7 +5,7 @@ import UserModel from "../models/UserModel.js";
 
 export const verifyLogin = async (req, res, next) => {
   try {
-    const path = req.path;
+    const path = req.originalUrl;
     const { email, password } = req.body;
     let user;
 
@@ -34,7 +34,9 @@ export const verifyLogin = async (req, res, next) => {
     const { _id, role } = user;
 
     const token = generateToken(role, _id);
-    res.cookie("token", token, {
+    console.log("🚀 ===> ~ verifyLogin ~ token:", token);
+
+    res.cookie("jwt", token, {
       httpOnly: true,
       secure: true,
       sameSite: "lax",
@@ -44,9 +46,7 @@ export const verifyLogin = async (req, res, next) => {
     return res.status(200).json({
       message: `Login successful`,
       username: `${
-        user.role === "applicant"
-          ? newAccount.firstname
-          : newAccount.companyName
+        user.role === "applicant" ? user.firstname : user.companyName
       }`,
     });
   } catch (error) {
@@ -55,7 +55,7 @@ export const verifyLogin = async (req, res, next) => {
 };
 
 export const logout = (req, res) => {
-  res.clearCookie("token", {
+  res.clearCookie("jwt", {
     httpOnly: true,
     secure: true,
     sameSite: "lax",

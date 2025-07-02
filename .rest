@@ -15,9 +15,53 @@ POST http://localhost:3001/company/create HTTP/1.1
 Content-Type: application/json
 
 {
-   "email":"testsfsdfest.com",
-   "password":"tst" ,
-   "companyName":"st",
+   "email":"testsfsdfe@st.com",
+   "password":"tst!Umifdjifd" ,
+   "companyName":"ssdfsdft",
    "recruiter":"test",
    "role":"company"
 }
+
+### POST login company
+POST http://localhost:3001/company/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+   "email":"testsfsdfe@st.com",
+   "password":"tst!Umifdjifd" 
+}
+
+### POST login user
+POST http://localhost:3001/user/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+   "email":"tekjhkj@asf.com",
+   "password":"tesfA4tk3uthu4ht!iuhidgt" 
+}
+
+### POST logout
+POST http://localhost:3001/auth/logout
+
+
+### POST create new ad --->> TOKEN logged after login. copy&paste HERE!!!!!
+POST http://localhost:3001/company/ad/create HTTP/1.1
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjoiNjg2NTRmMWY4Y2EyMDQxZmM5OTdlYWQxIiwiaWF0IjoxNzUxNDczOTQ0LCJleHAiOjE3NTE1MTcxNDR9.ssqgWdOYybh5giJ25hLlR9F241Vply-igUAgKzsX2Tw
+
+{
+  "title": "Senior Frontend Developer",
+  "text": "We are looking for an experienced frontend developer to lead UI efforts.",
+  "position": "Frontend Developer",
+  "location": "Berlin",
+  "salary": 75000,
+  "fulltime": true,
+  "techstack": [
+    { "name": "React" },
+    { "name": "TypeScript" },
+    { "name": "Tailwind CSS" }
+  ],
+  "createdFrom": "6865236cb5ac431e7671eb36"
+}
+
+
