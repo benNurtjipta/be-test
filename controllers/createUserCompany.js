@@ -4,9 +4,9 @@ import { hashPassword } from "../libs/password.js";
 import CompanyModel from "../models/CompanyModel.js";
 import UserModel from "../models/UserModel.js";
 
-const createUser = async (req, res, next) => {
+const createUserCompany = async (req, res, next) => {
   try {
-    const { role } = req.user;
+    const { role } = req.body;
     const { email, password } = req.body;
 
     const hashedPassword = await hashPassword(password);
@@ -22,7 +22,6 @@ const createUser = async (req, res, next) => {
         hashedPassword,
         firstname,
         lastname,
-        role: "applicant",
         createdAt,
       });
     } else if (role === "company") {
@@ -33,7 +32,6 @@ const createUser = async (req, res, next) => {
         hashedPassword,
         companyName,
         recruiter,
-        role: "company",
         createdAt,
       });
     } else {
@@ -50,16 +48,14 @@ const createUser = async (req, res, next) => {
       sameSite: "lax",
       maxAge: 24 * 60 * 60 * 1000,
     });
-    return res
-      .status(201)
-      .json({
-        message: `${role} created successful`,
-        username: `${(role = applicant
-          ? newAccount.firstname
-          : newAccount.companyName)}`,
-      });
+    return res.status(201).json({
+      message: `${role} created successful`,
+      username: `${
+        role === "applicant" ? newAccount.firstname : newAccount.companyName
+      }`,
+    });
   } catch (error) {
     return next(error);
   }
 };
-export default createUser;
+export default createUserCompany;

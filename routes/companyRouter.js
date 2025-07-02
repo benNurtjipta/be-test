@@ -1,8 +1,9 @@
 import express from "express";
+import createUserCompany from "../controllers/createUserCompany.js";
 
 const companyRouter = express.Router();
 
-companyRouter.post("/create", (req, res) => {});
+companyRouter.post("/create", createUserCompany);
 
 companyRouter
   .route("/ad")
