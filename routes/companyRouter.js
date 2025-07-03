@@ -19,10 +19,9 @@ companyRouter.post(
 companyRouter
   .get("/ad", protectCompanyRoute, (req, res) => {})
   .post("/ad/create", protectCompanyRoute, createAnzeigen)
-  .patch("/ad/update", protectCompanyRoute, (req, res) => {})
   .delete("/ad/:id/delete", protectCompanyRoute, deleteAdById)
   .patch("/ad/:id/update", protectCompanyRoute, patchAnzeigen)
-  .delete("/ad/:id/delete", protectCompanyRoute, (req, res) => {})
+
   .post("/auth/login", verifyLogin);
 
 export default companyRouter;
