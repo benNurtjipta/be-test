@@ -22,9 +22,10 @@ const descriptionSchema = new mongoose.Schema(
 const anzeigenSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: descriptionSchema,
-  appliedFrom: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  appliedFrom: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   createdFrom: { type: mongoose.Schema.Types.ObjectId, ref: "Company" },
   createdAt: { type: String },
+  updatedAt: { type: String }
 });
 
 export default mongoose.model("Anzeigen", anzeigenSchema);

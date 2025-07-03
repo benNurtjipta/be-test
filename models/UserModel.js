@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     firstname: { type: String, required: true },
     lastname: { type: String, required: true },
     role: { type: String, default: "applicant"},
-    appliedTo: { type: mongoose.Schema.Types.ObjectId, ref: "Anzeigen" },
+    appliedTo: [{ type: mongoose.Schema.Types.ObjectId, ref: "Anzeigen" }],
     createdAt: { type: String }
 }, {
     toJSON: { virtuals: true },
