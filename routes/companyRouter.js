@@ -21,7 +21,6 @@ companyRouter
   .post("/ad/create", protectCompanyRoute, createAnzeigen)
   .delete("/ad/:id/delete", protectCompanyRoute, deleteAdById)
   .patch("/ad/:id/update", protectCompanyRoute, patchAnzeigen)
-
   .post("/auth/login", verifyLogin);
 
 export default companyRouter;
