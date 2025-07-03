@@ -50,11 +50,11 @@ Content-Type: application/json
 Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjoiNjg2NTRmMWY4Y2EyMDQxZmM5OTdlYWQxIiwiaWF0IjoxNzUxNDczOTQ0LCJleHAiOjE3NTE1MTcxNDR9.ssqgWdOYybh5giJ25hLlR9F241Vply-igUAgKzsX2Tw
 
 {
-  "title": "Senior Frontend Developer",
-  "text": "We are looking for an experienced frontend developer to lead UI efforts.",
-  "position": "Frontend Developer",
+  "title": "Senior Frontend Developerwerwe",
+  "text": "We are looking for an experwerwienced frontend developer to lead UI efforts.",
+  "position": "Frontenwerweed Developer",
   "location": "Berlin",
-  "salary": 75000,
+  "salary": 750500,
   "fulltime": true,
   "techstack": [
     { "name": "React" },

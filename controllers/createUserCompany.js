@@ -44,7 +44,7 @@ const createUserCompany = async (req, res, next) => {
 
     res.cookie("jwt", token, {
       httpOnly: true,
-      secure: true,
+      secure: false,
       sameSite: "lax",
       maxAge: 24 * 60 * 60 * 1000,
     });
