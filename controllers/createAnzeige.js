@@ -4,16 +4,8 @@ import CompanyModel from "../models/CompanyModel.js";
 
 export const createAnzeigen = async (req, res, next) => {
   try {
-    const {
-      title,
-      text,
-      position,
-      location,
-      salary,
-      fulltime,
-      techstack,
-      createdFrom,
-    } = req.body;
+    const { title, text, position, location, salary, fulltime, techstack } =
+      req.body;
 
     const companyId = req.company.id;
 
@@ -33,7 +25,7 @@ export const createAnzeigen = async (req, res, next) => {
         fulltime,
         techstack: Array.isArray(techstack) ? techstack : [],
       },
-      createdFrom,
+      createdFrom: companyId,
       createdAt,
     });
 
