@@ -50,7 +50,7 @@ Content-Type: application/json
 Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjoiNjg2NjNkYTVkNjYwZjE1MGZjMTEwNDhjIiwiaWF0IjoxNzUxNTMwOTg1LCJleHAiOjE3NTE1NzQxODV9.qKFcl1Dn3z2I3LPz7M8xzhbPcKUJspRYGYzej1wcDCs
 
 {
-  "title": "Senior Frontend Developer",
+  "title": "Test Anzeige",
   "text": "We are looking for an experienced frontend developer to lead UI efforts.",
   "position": "Frontend Developer",
   "location": "Berlin",
@@ -65,7 +65,11 @@ Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjo
 }
 
 
-###
+### POST Apply to Ad
 POST http://localhost:3001/user/ad/686640b8d660f150fc110498 HTTP/1.1
 Content-Type: application/json
 
+
+### DELETE Ad by ID
+DELETE http://localhost:3001/company/ad/68665032f57a9148dad54fa7/delete HTTP/1.1
+Content-Type: application/json
