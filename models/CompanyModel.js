@@ -6,7 +6,7 @@ const companySchema = new mongoose.Schema({
     companyName: { type: String, required: true },
     recruiter: { type: String },
     role: { type: String, default: "company"},
-    adsCreated: { type: mongoose.Schema.Types.ObjectId, ref: "Anzeigen" },
+    adsCreated: [{ type: mongoose.Schema.Types.ObjectId, ref: "Anzeigen" }],
     createdAt: { type: String }
 })
 

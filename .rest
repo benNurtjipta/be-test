@@ -47,7 +47,7 @@ POST http://localhost:3001/auth/logout
 ### POST create new ad --->> TOKEN logged after login. copy&paste HERE!!!!!
 POST http://localhost:3001/company/ad/create HTTP/1.1
 Content-Type: application/json
-Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjoiNjg2NTRmMWY4Y2EyMDQxZmM5OTdlYWQxIiwiaWF0IjoxNzUxNDczOTQ0LCJleHAiOjE3NTE1MTcxNDR9.ssqgWdOYybh5giJ25hLlR9F241Vply-igUAgKzsX2Tw
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjoiNjg2NjNkYTVkNjYwZjE1MGZjMTEwNDhjIiwiaWF0IjoxNzUxNTMwOTg1LCJleHAiOjE3NTE1NzQxODV9.qKFcl1Dn3z2I3LPz7M8xzhbPcKUJspRYGYzej1wcDCs
 
 {
   "title": "Senior Frontend Developerwerwe",
@@ -64,4 +64,8 @@ Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiY29tcGFueSIsImlkIjo
   "createdFrom": "6865236cb5ac431e7671eb36"
 }
 
+
+###
+POST http://localhost:3001/user/ad/686640b8d660f150fc110498 HTTP/1.1
+Content-Type: application/json
 
