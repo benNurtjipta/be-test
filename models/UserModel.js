@@ -10,11 +10,12 @@ const userSchema = new mongoose.Schema({
     createdAt: { type: String }
 }, {
     toJSON: { virtuals: true },
-    toObject: { virtuals: true }
+    toObject: { virtuals: true },
+    id: false
 })
 
 userSchema.virtual("fullname").get(function () {
-    const fullname = `${firstname} ${lastname}`
+    const fullname = `${this.firstname} ${this.lastname}`
     return fullname
 })
 
