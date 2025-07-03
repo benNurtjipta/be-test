@@ -60,7 +60,7 @@ Content-Type: application/json
     { "name": "TypeScript" },
     { "name": "Tailwind CSS" }
   ],
-  "createdFrom": "6865236cb5ac431e7671eb36"
+  "createdFrom": "6866585d7fd3337bd3644d60"
 }
 
 ### PATCH anzeige ändern
@@ -72,10 +72,14 @@ Content-Type: application/json
 }
 
 ### POST apply user
-POST http://localhost:3001/user/ad/686640b8d660f150fc110498 HTTP/1.1
+POST http://localhost:3001/user/ad/6866587c7fd3337bd3644d64 HTTP/1.1
 Content-Type: application/json
 
 
 ### DELETE Ad by ID
 DELETE http://localhost:3001/company/ad/68665032f57a9148dad54fa7/delete HTTP/1.1
+Content-Type: application/json
+
+### GET All Ads by Company
+GET http://localhost:3001/company/ad HTTP/1.1
 Content-Type: application/json
