@@ -34,7 +34,6 @@ export const verifyLogin = async (req, res, next) => {
     const { _id, role } = user;
 
     const token = generateToken(role, _id);
-    console.log("🚀 ===> ~ verifyLogin ~ token:", token);
 
     res.cookie("jwt", token, {
       httpOnly: true,
