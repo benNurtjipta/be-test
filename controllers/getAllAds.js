@@ -9,7 +9,7 @@ export const getAllAds = async (req, res, next) => {
       query = { "description.techstack.name": { $in: filters } };
     }
 
-    const ads = await Anzeigen.find({})
+    const ads = await Anzeigen.find(query)
       .select("-appliedFrom -__v")
       .populate({
         path: "createdFrom",
