@@ -59,8 +59,7 @@ Content-Type: application/json
     { "name": "React" },
     { "name": "TypeScript" },
     { "name": "Tailwind CSS" }
-  ],
-  "createdFrom": "6865236cb5ac431e7671eb36"
+  ]
 }
 
 ### PATCH anzeige ändern
