@@ -49,16 +49,16 @@ POST http://localhost:3001/company/ad/create HTTP/1.1
 Content-Type: application/json
 
 {
-  "title": "Senior Frontend Developerwerwe",
+  "title": "Senior Frowwwntend Developerwerwe",
   "text": "We are looking for an experwerwienced frontend developer to lead UI efforts.",
   "position": "Frontenwerweed Developer",
   "location": "Berlin",
   "salary": 750500,
   "fulltime": true,
   "techstack": [
-    { "name": "React" },
-    { "name": "TypeScript" },
-    { "name": "Tailwind CSS" }
+    { "name": "react" },
+    { "name": "typeccript" },
+    { "name": "tailwind css" }
   ]
 }
 
@@ -81,4 +81,13 @@ Content-Type: application/json
 
 ### GET All Ads by Company
 GET http://localhost:3001/company/ad HTTP/1.1
+Content-Type: application/json
+
+
+### GET All Ads by USER
+GET http://localhost:3001/user/ad HTTP/1.1
+Content-Type: application/json
+
+### GET All Ads by USER with query
+GET http://localhost:3001/user/ad?filter=react HTTP/1.1
 Content-Type: application/json
